@@ -1,0 +1,670 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jpillora/node-edit-google-spreadsheet#readme"
+
+    >edit-google-spreadsheet (v0.2.21)</a>
+</h1>
+<h4>> A simple API for reading and writing Google Spreadsheets in Node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.edit-google-spreadsheet">module edit-google-spreadsheet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.create">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>create
+            <span class="apidocSignatureSpan">(opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.load">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>load
+            <span class="apidocSignatureSpan">(opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>metadata
+            <span class="apidocSignatureSpan">(spreadsheet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>metadata.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.edit-google-spreadsheet.metadata">module edit-google-spreadsheet.metadata</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.metadata">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>metadata
+            <span class="apidocSignatureSpan">(spreadsheet)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.edit-google-spreadsheet.metadata.prototype">module edit-google-spreadsheet.metadata.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.prototype._set">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>_set
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.extract">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>extract
+            <span class="apidocSignatureSpan">(result)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.get">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>get
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.set">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>set
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.url">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>url
+            <span class="apidocSignatureSpan">(isId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.edit-google-spreadsheet.util">module edit-google-spreadsheet.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.util.gcell2cell">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>gcell2cell
+            <span class="apidocSignatureSpan">(cell, getValue, useTextValues)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.util.int2cell">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>int2cell
+            <span class="apidocSignatureSpan">(r, c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.edit-google-spreadsheet.util.num">
+            function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>num
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.edit-google-spreadsheet" id="apidoc.module.edit-google-spreadsheet">module edit-google-spreadsheet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.create" id="apidoc.element.edit-google-spreadsheet.create">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>create
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (opts, callback) {
+  if (!callback)
+    callback = opts.callback;
+  if (!callback)
+    throw &#x22;Missing callback&#x22;;
+  if (!(opts.username &#x26;&#x26; opts.password) &#x26;&#x26; !opts.oauth &#x26;&#x26; !opts.oauth2 &#x26;&#x26; !opts.accessToken)
+    return callback(&#x22;Missing authentication information&#x22;);
+  if (!opts.spreadsheetId &#x26;&#x26; !opts.spreadsheetName)
+    return callback(&#x22;Missing &#x27;spreadsheetId&#x27; or &#x27;spreadsheetName&#x27;&#x22;);
+  if (!opts.worksheetId &#x26;&#x26; !opts.worksheetName)
+    return callback(&#x22;Missing &#x27;worksheetId&#x27; or &#x27;worksheetName&#x27;&#x22;);
+
+  //default to true if useCellTextValues is not set or defined.
+  opts.useCellTextValues = (_.has(opts, &#x27;useCellTextValues&#x27;)) ? opts.useCellTextValues : true;
+
+  var spreadsheet = new Spreadsheet(opts);
+
+  //default to http&#x27;s&#x27; when undefined
+  opts.useHTTPS = opts.useHTTPS === false ? &#x27;&#x27; : &#x27;s&#x27;;
+  spreadsheet.protocol += opts.useHTTPS;
+
+  //add to spreadsheet
+  _.extend(spreadsheet, _.pick(opts,
+    &#x27;spreadsheetId&#x27;, &#x27;spreadsheetName&#x27;,
+    &#x27;worksheetId&#x27;, &#x27;worksheetName&#x27;, &#x27;debug&#x27;
+  ));
+
+  spreadsheet.log(&#x27;Logging into Google...&#x27;.grey);
+  auth(opts, function(err, token) {
+    if (err) return callback(err);
+    spreadsheet.log(&#x27;Logged into Google&#x27;.green);
+    spreadsheet.setToken(token);
+    spreadsheet.init(callback);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.load" id="apidoc.element.edit-google-spreadsheet.load">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>load
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (opts, callback) {
+  if (!callback)
+    callback = opts.callback;
+  if (!callback)
+    throw &#x22;Missing callback&#x22;;
+  if (!(opts.username &#x26;&#x26; opts.password) &#x26;&#x26; !opts.oauth &#x26;&#x26; !opts.oauth2 &#x26;&#x26; !opts.accessToken)
+    return callback(&#x22;Missing authentication information&#x22;);
+  if (!opts.spreadsheetId &#x26;&#x26; !opts.spreadsheetName)
+    return callback(&#x22;Missing &#x27;spreadsheetId&#x27; or &#x27;spreadsheetName&#x27;&#x22;);
+  if (!opts.worksheetId &#x26;&#x26; !opts.worksheetName)
+    return callback(&#x22;Missing &#x27;worksheetId&#x27; or &#x27;worksheetName&#x27;&#x22;);
+
+  //default to true if useCellTextValues is not set or defined.
+  opts.useCellTextValues = (_.has(opts, &#x27;useCellTextValues&#x27;)) ? opts.useCellTextValues : true;
+
+  var spreadsheet = new Spreadsheet(opts);
+
+  //default to http&#x27;s&#x27; when undefined
+  opts.useHTTPS = opts.useHTTPS === false ? &#x27;&#x27; : &#x27;s&#x27;;
+  spreadsheet.protocol += opts.useHTTPS;
+
+  //add to spreadsheet
+  _.extend(spreadsheet, _.pick(opts,
+    &#x27;spreadsheetId&#x27;, &#x27;spreadsheetName&#x27;,
+    &#x27;worksheetId&#x27;, &#x27;worksheetName&#x27;, &#x27;debug&#x27;
+  ));
+
+  spreadsheet.log(&#x27;Logging into Google...&#x27;.grey);
+  auth(opts, function(err, token) {
+    if (err) return callback(err);
+    spreadsheet.log(&#x27;Logged into Google&#x27;.green);
+    spreadsheet.setToken(token);
+    spreadsheet.init(callback);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Basic Usage
+
+Load a spreadsheet:
+
+``` js
+  var Spreadsheet = require(&#x27;edit-google-spreadsheet&#x27;);
+
+  Spreadsheet.<span class="apidocCodeKeywordSpan">load</span>({
+debug: true,
+spreadsheetName: &#x27;node-edit-spreadsheet&#x27;,
+worksheetName: &#x27;Sheet1&#x27;,
+
+// Choose from 1 of the 5 authentication methods:
+
+//    1. Username and Password has been deprecated. OAuth2 is recommended.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata" id="apidoc.element.edit-google-spreadsheet.metadata">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>metadata
+        <span class="apidocSignatureSpan">(spreadsheet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metadata = function (spreadsheet){
+  this.spreadsheet = spreadsheet;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Get metadata
+
+``` js
+  function sheetReady(err, spreadsheet) {
+    if(err) throw err;
+
+    spreadsheet.<span class="apidocCodeKeywordSpan">metadata</span>(function(err, metadata){
+      if(err) throw err;
+      console.log(metadata);
+      // { title: &#x27;Sheet3&#x27;, rowCount: &#x27;100&#x27;, colCount: &#x27;20&#x27;, updated: [Date] }
+    });
+  }
+```
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.edit-google-spreadsheet.metadata" id="apidoc.module.edit-google-spreadsheet.metadata">module edit-google-spreadsheet.metadata</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.metadata" id="apidoc.element.edit-google-spreadsheet.metadata.metadata">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.</span>metadata
+        <span class="apidocSignatureSpan">(spreadsheet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metadata = function (spreadsheet){
+  this.spreadsheet = spreadsheet;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Get metadata
+
+``` js
+  function sheetReady(err, spreadsheet) {
+    if(err) throw err;
+
+    spreadsheet.<span class="apidocCodeKeywordSpan">metadata</span>(function(err, metadata){
+      if(err) throw err;
+      console.log(metadata);
+      // { title: &#x27;Sheet3&#x27;, rowCount: &#x27;100&#x27;, colCount: &#x27;20&#x27;, updated: [Date] }
+    });
+  }
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.edit-google-spreadsheet.metadata.prototype" id="apidoc.module.edit-google-spreadsheet.metadata.prototype">module edit-google-spreadsheet.metadata.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.prototype._set" id="apidoc.element.edit-google-spreadsheet.metadata.prototype._set">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>_set
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_set = function (data, callback) {
+  var _this = this;
+  var entry = &#x27;&#x3c;entry xmlns=&#x22;http://www.w3.org/2005/Atom&#x22; &#x27;+
+               &#x27;xmlns:gs=&#x22;http://schemas.google.com/spreadsheets/2006&#x22;&#x3e;&#x27;+
+    &#x27;&#x3c;id&#x3e;&#x27;+this.url(true)+&#x27;&#x3c;/id&#x3e;&#x27; +
+    &#x27;&#x3c;title&#x3e;&#x27;+data.title+&#x27;&#x3c;/title&#x3e;&#x27; +
+    &#x27;&#x3c;gs:colCount&#x3e;&#x27;+data.colCount+&#x27;&#x3c;/gs:colCount&#x3e;&#x27; +
+    &#x27;&#x3c;gs:rowCount&#x3e;&#x27;+data.rowCount+&#x27;&#x3c;/gs:rowCount&#x3e;&#x27; +
+    &#x27;&#x3c;/entry&#x3e;&#x27;;
+
+  this.spreadsheet.request({
+    method: &#x27;PUT&#x27;,
+    url: this.url(),
+    body: entry
+  }, function(err, result) {
+    if(err) return callback(err);
+    callback(null, _this.extract(result));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Metadata.prototype.set = function(data, callback) {
+var _this = this;
+//must retrieve current col/row counts if missing
+if(data.colCount === undefined || data.rowCount === undefined)
+  this.get(function(err, metadata) {
+    if(err) return callback(err);
+    _this.<span class="apidocCodeKeywordSpan">_set</span>(_.extend(metadata, data), callback);
+  });
+else
+  _this._set(data, callback);
+};
+
+Metadata.prototype._set = function(data, callback) {
+var _this = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.extract" id="apidoc.element.edit-google-spreadsheet.metadata.prototype.extract">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>extract
+        <span class="apidocSignatureSpan">(result)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function (result) {
+  return {
+    updated: new Date(result.entry.updated),
+    title: result.entry.title,
+    rowCount: result.entry[&#x27;gs:rowCount&#x27;],
+    colCount: result.entry[&#x27;gs:colCount&#x27;]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Metadata.prototype.get = function(callback) {
+var _this = this;
+this.spreadsheet.request({
+  url: this.url()
+}, function(err, result) {
+  if(err) return callback(err);
+  callback(null, _this.<span class="apidocCodeKeywordSpan">extract</span>(result));
+});
+};
+
+Metadata.prototype.set = function(data, callback) {
+var _this = this;
+//must retrieve current col/row counts if missing
+if(data.colCount === undefined || data.rowCount === undefined)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.get" id="apidoc.element.edit-google-spreadsheet.metadata.prototype.get">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>get
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (callback) {
+  var _this = this;
+  this.spreadsheet.request({
+    url: this.url()
+  }, function(err, result) {
+    if(err) return callback(err);
+    callback(null, _this.extract(result));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+};
+
+Metadata.prototype.set = function(data, callback) {
+  var _this = this;
+  //must retrieve current col/row counts if missing
+  if(data.colCount === undefined || data.rowCount === undefined)
+    this.<span class="apidocCodeKeywordSpan">get</span>(function(err, metadata) {
+      if(err) return callback(err);
+      _this._set(_.extend(metadata, data), callback);
+    });
+  else
+    _this._set(data, callback);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.set" id="apidoc.element.edit-google-spreadsheet.metadata.prototype.set">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>set
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (data, callback) {
+  var _this = this;
+  //must retrieve current col/row counts if missing
+  if(data.colCount === undefined || data.rowCount === undefined)
+    this.get(function(err, metadata) {
+      if(err) return callback(err);
+      _this._set(_.extend(metadata, data), callback);
+    });
+  else
+    _this._set(data, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.metadata.prototype.url" id="apidoc.element.edit-google-spreadsheet.metadata.prototype.url">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.metadata.prototype.</span>url
+        <span class="apidocSignatureSpan">(isId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">url = function (isId) {
+  return this.spreadsheet.protocol+&#x27;://spreadsheets.google.com/feeds/worksheets/&#x27; +
+         this.spreadsheet.spreadsheetId + &#x27;/&#x27; + (isId?&#x27;&#x27;:&#x27;private/full/&#x27;) + this.spreadsheet.worksheetId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    colCount: result.entry[&#x27;gs:colCount&#x27;]
+  };
+};
+
+Metadata.prototype.get = function(callback) {
+  var _this = this;
+  this.spreadsheet.request({
+    url: this.<span class="apidocCodeKeywordSpan">url</span>()
+  }, function(err, result) {
+    if(err) return callback(err);
+    callback(null, _this.extract(result));
+  });
+};
+
+Metadata.prototype.set = function(data, callback) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.edit-google-spreadsheet.util" id="apidoc.module.edit-google-spreadsheet.util">module edit-google-spreadsheet.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.util.gcell2cell" id="apidoc.element.edit-google-spreadsheet.util.gcell2cell">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>gcell2cell
+        <span class="apidocSignatureSpan">(cell, getValue, useTextValues)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gcell2cell = function (cell, getValue, useTextValues) {
+  //get formula AND has a formula?
+  if(!getValue &#x26;&#x26; /^=/.test(cell.inputValue)) {
+    //must convert &#x27;=RC[-2]+R[3]C[-1]&#x27; to &#x27;=B5+C8&#x27;
+    return cell.inputValue.replace(/(R(\[(-?\d+)\])?)(C(\[(-?\d+)\])?)/g, function() {
+      return exports.int2cell(
+          exports.num(cell.row) + exports.num(arguments[3] || 0),
+          exports.num(cell.col) + exports.num(arguments[6] || 0)
+        );
+    });
+  }
+  //get value
+  return (useTextValues) ? exports.num(cell.$t) : exports.num(cell.inputValue);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.util.int2cell" id="apidoc.element.edit-google-spreadsheet.util.int2cell">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>int2cell
+        <span class="apidocSignatureSpan">(r, c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">int2cell = function (r, c) {
+  return String.fromCharCode(64+c)+r;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.gcell2cell = function(cell, getValue, useTextValues) {
+//get formula AND has a formula?
+if(!getValue &#x26;&#x26; /^=/.test(cell.inputValue)) {
+  //must convert &#x27;=RC[-2]+R[3]C[-1]&#x27; to &#x27;=B5+C8&#x27;
+  return cell.inputValue.replace(/(R(\[(-?\d+)\])?)(C(\[(-?\d+)\])?)/g, function() {
+    return exports.<span class="apidocCodeKeywordSpan">int2cell</span>(
+        exports.num(cell.row) + exports.num(arguments[3] || 0),
+        exports.num(cell.col) + exports.num(arguments[6] || 0)
+      );
+  });
+}
+//get value
+return (useTextValues) ? exports.num(cell.$t) : exports.num(cell.inputValue);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.edit-google-spreadsheet.util.num" id="apidoc.element.edit-google-spreadsheet.util.num">
+        function <span class="apidocSignatureSpan">edit-google-spreadsheet.util.</span>num
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">num = function (obj) {
+  if(obj === undefined) return 0;
+  if(typeof obj === &#x27;number&#x27; || typeof obj === &#x27;boolean&#x27;) return obj;
+  if(typeof obj === &#x27;string&#x27;) {
+    //ensure that the string is *only* a number
+    if(!/^\-?\d+(\.\d+)?$/.test(obj)) return obj;
+    var res = parseFloat(obj, 10);
+    if(isNaN(res)) return obj;
+    return res;
+  }
+  throw &#x22;Invalid number: &#x22; + JSON.stringify(obj);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.gcell2cell = function(cell, getValue, useTextValues) {
+  //get formula AND has a formula?
+  if(!getValue &#x26;&#x26; /^=/.test(cell.inputValue)) {
+    //must convert &#x27;=RC[-2]+R[3]C[-1]&#x27; to &#x27;=B5+C8&#x27;
+    return cell.inputValue.replace(/(R(\[(-?\d+)\])?)(C(\[(-?\d+)\])?)/g, function() {
+      return exports.int2cell(
+          exports.<span class="apidocCodeKeywordSpan">num</span>(cell.row) + exports.num(arguments[3] || 0),
+          exports.num(cell.col) + exports.num(arguments[6] || 0)
+        );
+    });
+  }
+  //get value
+  return (useTextValues) ? exports.num(cell.$t) : exports.num(cell.inputValue);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
