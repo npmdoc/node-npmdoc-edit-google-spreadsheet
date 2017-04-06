@@ -1,0 +1,17 @@
+{
+    "buildNpmdoc":"edit-google-spreadsheet",
+    "devDependencies": {
+        "edit-google-spreadsheet": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "name":"npmdoc-edit-google-spreadsheet",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-edit-google-spreadsheet"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh"
+    },
+    "version": "0.0.1"
+}
