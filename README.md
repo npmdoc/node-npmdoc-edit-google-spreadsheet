@@ -1,6 +1,6 @@
 # npmdoc-edit-google-spreadsheet
 
-#### api documentation for  [edit-google-spreadsheet (v0.2.21)](https://github.com/jpillora/node-edit-google-spreadsheet#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-edit-google-spreadsheet.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-edit-google-spreadsheet) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-edit-google-spreadsheet.svg)](https://travis-ci.org/npmdoc/node-npmdoc-edit-google-spreadsheet)
+#### basic api documentation for  [edit-google-spreadsheet (v0.2.21)](https://github.com/jpillora/node-edit-google-spreadsheet#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-edit-google-spreadsheet.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-edit-google-spreadsheet) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-edit-google-spreadsheet.svg)](https://travis-ci.org/npmdoc/node-npmdoc-edit-google-spreadsheet)
 
 #### > A simple API for reading and writing Google Spreadsheets in Node.js
 
@@ -63,7 +63,8 @@
     "scripts": {
         "test": "mocha test --recursive"
     },
-    "version": "0.2.21"
+    "version": "0.2.21",
+    "bin": {}
 }
 ```
 
